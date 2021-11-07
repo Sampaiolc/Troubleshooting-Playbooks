@@ -1,0 +1,5 @@
+[web]
+dev01.tchelinux.local
+
+[web-prod]
+web01.tchelinu.local

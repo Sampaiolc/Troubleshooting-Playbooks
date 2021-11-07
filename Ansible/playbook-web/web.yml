@@ -1,0 +1,17 @@
+---
+- name: Playbook Web
+  hosts: web
+  vars:
+    install_state: present
+    test_var: Teste: variavel de teste
+
+  role:
+    - apache
+
+  tasks:
+    - name: Install mariadb
+      yum: name=mariadb state={{ install_state }}
+
+    - name: Print var
+      debug:
+        var: test_var
